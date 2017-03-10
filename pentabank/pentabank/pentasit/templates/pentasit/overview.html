@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'pentasit/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'pentasit/content/site.css' %}" />
+    <script src="{% static 'pentasit/scripts/modernizr-2.6.2.js' %}"></script>
+    <script src="{% static 'pentasit/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'pentasit/scripts/bootstrap.min.js' %}"></script>
+    <script src="{% static 'pentasit/scripts/respond.js' %}"></script>
+</head>
+
+<body>
+    {% include 'pentasit/topnav.html' %}
+    <div class="container body-content">
+    {% if overview_list %}
+      <h3>Available Pentaset situations</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            {% for hd in order_heads %}
+            <th class="sortable" scope="col">
+              <div class="text">
+                {% if hd.order == "" %}{{hd.name}}
+                {% else %}
+                <a href=?{{hd.order}}>{{hd.name}}</a>
+                {% endif %}
+              </div>
+            </th>
+            {% endfor %}
+          </tr>
+          <tr>
+          </tr>
+        </thead>
+        <tbody>
+        {% for sit in overview_list %}
+          <tr>
+            <td><a href="{% url 'situation' %}{{sit.pk}}/change/">{{sit.name}}</a></td>
+            <td>{{sit.preposition}}</td>
+            <td>{{sit.get_npType_display}}</td>
+            <td>{{sit.get_penta_display}}</td>
+            <td>{{sit.get_action_display}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No situations are available.</p>
+    {% endif %}
+    </div>
+{% block scripts %}{% endblock %}
+</body>
+</html>

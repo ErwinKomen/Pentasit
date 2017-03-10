@@ -1,0 +1,14 @@
+﻿{% extends "pentasit/layout.html" %}
+
+{% block title %}
+{{block.super}} - Create Situation
+{% endblock %}
+
+{% block content %}
+  <form action="{% url 'pentasit_situation_create' %}"
+        method="post">
+    {% csrf_token %}
+    <ul>{{form.as_ul}}</ul>
+    <button type="submit">Create Situation</button>
+  </form>
+{% endblock %}
