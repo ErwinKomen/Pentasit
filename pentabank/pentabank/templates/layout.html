@@ -11,10 +11,12 @@
     <script src="{% static 'pentasit/scripts/jquery-1.10.2.js' %}"></script>
     <script src="{% static 'pentasit/scripts/bootstrap.js' %}"></script>
     <script src="{% static 'pentasit/scripts/respond.js' %}"></script>
+    <script src="{% static 'ptxref/scripts/upload.js' %}"></script>
+    <script src="{% static 'ptxref/scripts/ptx.ref.js' %}"></script>
 </head>
 
 <body>
-    {% include 'pentasit/topnav.html' %}
+    {% include 'topnav.html' %}
 
     <div class="container body-content">
 {% block content %}{% endblock %}

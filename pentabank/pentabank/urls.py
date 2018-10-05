@@ -33,7 +33,7 @@ urlpatterns = [
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
-            'template_name': 'pentasit/login.html',
+            'template_name': 'login.html',
             'authentication_form': pentabank.pentasit.forms.BootstrapAuthenticationForm,
             'extra_context':
             {

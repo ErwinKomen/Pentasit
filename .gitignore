@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/pentabank/pentabank/ptxref/migrations/__pycache__
+/pentabank/pentabank/ptxref/migrations
+/pentabank/pentabank/ptxref/__pycache__

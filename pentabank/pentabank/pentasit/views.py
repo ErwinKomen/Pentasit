@@ -14,21 +14,16 @@ from pentabank.settings import APP_PREFIX
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'pentasit/index.html',
-        {
-            'title':'Home Page',
-            'year':datetime.now().year,
-        }
-    )
+    context =  {'title':'Home Page','year':datetime.now().year,}
+    response = render(request,'index.html', context )
+    return response
 
 def contact(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'pentasit/contact.html',
+        'contact.html',
         {
             'title':'Contact',
             'message':'Your contact page.',
@@ -41,7 +36,7 @@ def about(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'pentasit/about.html',
+        'about.html',
         {
             'title':'About',
             'message':'Your application description page.',

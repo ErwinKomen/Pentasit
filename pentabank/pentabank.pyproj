@@ -6,6 +6,7 @@
     <RootNamespace>pentabank</RootNamespace>
     <InterpreterId>{d7dbb717-64d4-4450-8655-943ddaa0b7f0}</InterpreterId>
     <InterpreterVersion>3.5</InterpreterVersion>
+    <WebBrowserPort>6515</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -17,7 +18,7 @@
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
-    <LaunchProvider>Django launcher</LaunchProvider>
+    <LaunchProvider>Web launcher</LaunchProvider>
     <OutputPath>.</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -38,6 +39,13 @@
     <Compile Include="pentabank\pentasit\tests.py" />
     <Compile Include="pentabank\pentasit\views.py" />
     <Compile Include="pentabank\pentasit\__init__.py" />
+    <Compile Include="pentabank\ptxref\admin.py" />
+    <Compile Include="pentabank\ptxref\apps.py" />
+    <Compile Include="pentabank\ptxref\migrations\__init__.py" />
+    <Compile Include="pentabank\ptxref\models.py" />
+    <Compile Include="pentabank\ptxref\tests.py" />
+    <Compile Include="pentabank\ptxref\views.py" />
+    <Compile Include="pentabank\ptxref\__init__.py" />
     <Compile Include="pentabank\__init__.py" />
     <Compile Include="pentabank\settings.py" />
     <Compile Include="pentabank\urls.py" />
@@ -45,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="pentabank\" />
+    <Folder Include="pentabank\templates\" />
     <Folder Include="pentabank\pentasit\" />
     <Folder Include="pentabank\pentasit\migrations\" />
     <Folder Include="pentabank\pentasit\static\" />
@@ -54,6 +63,12 @@
     <Folder Include="pentabank\pentasit\static\pentasit\scripts\" />
     <Folder Include="pentabank\pentasit\templates\" />
     <Folder Include="pentabank\pentasit\templates\pentasit\" />
+    <Folder Include="pentabank\ptxref\" />
+    <Folder Include="pentabank\ptxref\migrations\" />
+    <Folder Include="pentabank\ptxref\static\" />
+    <Folder Include="pentabank\ptxref\static\ptxref\" />
+    <Folder Include="pentabank\ptxref\static\ptxref\scripts\" />
+    <Folder Include="pentabank\ptxref\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="pentabank\pentasit\static\pentasit\content\bootstrap.css" />
@@ -78,15 +93,18 @@
     <Content Include="pentabank\pentasit\static\pentasit\scripts\modernizr-2.6.2.js" />
     <Content Include="pentabank\pentasit\static\pentasit\scripts\respond.js" />
     <Content Include="pentabank\pentasit\static\pentasit\scripts\respond.min.js" />
-    <Content Include="pentabank\pentasit\templates\pentasit\about.html" />
-    <Content Include="pentabank\pentasit\templates\pentasit\contact.html" />
-    <Content Include="pentabank\pentasit\templates\pentasit\index.html" />
-    <Content Include="pentabank\pentasit\templates\pentasit\layout.html" />
-    <Content Include="pentabank\pentasit\templates\pentasit\login.html" />
-    <Content Include="pentabank\pentasit\templates\pentasit\loginpartial.html" />
+    <Content Include="pentabank\templates\about.html" />
+    <Content Include="pentabank\templates\contact.html" />
+    <Content Include="pentabank\templates\index.html" />
+    <Content Include="pentabank\templates\layout.html" />
+    <Content Include="pentabank\templates\login.html" />
+    <Content Include="pentabank\templates\loginpartial.html" />
     <Content Include="pentabank\pentasit\templates\pentasit\overview.html" />
     <Content Include="pentabank\pentasit\templates\pentasit\situation_form.html" />
-    <Content Include="pentabank\pentasit\templates\pentasit\topnav.html" />
+    <Content Include="pentabank\templates\topnav.html" />
+    <Content Include="pentabank\ptxref\static\ptxref\scripts\ptx.ref.js" />
+    <Content Include="pentabank\ptxref\static\ptxref\scripts\upload.js" />
+    <Content Include="pentabank\ptxref\templates\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>

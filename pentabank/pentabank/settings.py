@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pentabank.pentasit',
+    'pentabank.ptxref',
 ]
 
 MIDDLEWARE_CLASSES = [
